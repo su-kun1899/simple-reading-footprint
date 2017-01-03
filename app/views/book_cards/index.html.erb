@@ -1,2 +1,20 @@
 <h1>BookCards#index</h1>
-<p>Find me in app/views/book_cards/index.html.erb</p>
+<p>※現在登録されているデータの一覧です。</p>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>題名</th>
+    <th>著者</th>
+    <th colspan="2"></th>
+  </tr>
+  <% @book_cards.each do |book_card| %>
+  <tr>
+    <td><%=	 book_card.id %></td>
+    <td><a href="/book_cards/<%= book_card.id %>"><%=	 book_card.title %></a></td>
+    <td><%=	 book_card.author %></td>
+    <td><a href="/book_cards/edit/<%= book_card.id %>">編集</a></td>
+    <td><a href="#">削除</a></td>
+  </tr>
+  <% end %>
+</table>
+<p class="new-link"><a href="/book_cards/add">※新しいデータを入力 &gt;&gt;</a></p>
