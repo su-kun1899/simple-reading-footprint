@@ -1,2 +1,29 @@
-<h1>BookCards#get</h1>
-<p>Find me in app/views/book_cards/get.html.erb</p>
+<h1>BookCards#detail</h1>
+<p>「<%= @book_card.title %>」の読書データ</p>
+<table>
+  <tr>
+    <th>ID</th>
+    <td><%= @book_card.id %></td>
+    </tr>
+  <tr>
+    <th>題名</th>
+    <td><%= @book_card.title %></td>
+    </tr>
+  <tr>
+    <th>著者</th>
+    <td><%= @book_card.author %></td>
+  </tr>
+  <tr>
+    <th>価格</th>
+    <td><%= @book_card.price %></td>
+  </tr>
+  <tr>
+    <th>出版社</th>
+    <td><%= @book_card.publisher %></td>
+  </tr>
+  <tr>
+    <th>コメント</th>
+    <td><%= @book_card.memo %></td>
+  </tr>
+</table>
+<p class="bottom-link"><a href="/book_cards">&lt;&lt; ※トップページに戻る</a></p>

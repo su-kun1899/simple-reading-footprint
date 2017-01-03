@@ -1,6 +1,6 @@
 <h1>BookCards#index</h1>
 <p>※現在登録されているデータの一覧です。</p>
-<table>
+<table class="book_cards">
   <tr>
     <th>ID</th>
     <th>題名</th>
@@ -8,13 +8,15 @@
     <th colspan="2"></th>
   </tr>
   <% @book_cards.each do |book_card| %>
-  <tr>
-    <td><%=	 book_card.id %></td>
-    <td><a href="/book_cards/<%= book_card.id %>"><%=	 book_card.title %></a></td>
-    <td><%=	 book_card.author %></td>
-    <td><a href="/book_cards/edit/<%= book_card.id %>">編集</a></td>
-    <td><a href="#">削除</a></td>
-  </tr>
+      <tr>
+        <td class="id-row"><%= book_card.id %></td>
+        <td class="title-row">
+          <a href="/book_cards/<%= book_card.id %>"><%= book_card.title %></a>
+        </td>
+        <td class="author-row"><%= book_card.author %></td>
+        <td class="button-row"><a href="/book_cards/edit/<%= book_card.id %>">編集</a></td>
+        <td class="button-row"><a href="#">削除</a></td>
+      </tr>
   <% end %>
 </table>
-<p class="new-link"><a href="/book_cards/add">※新しいデータを入力 &gt;&gt;</a></p>
+<p class="bottom-link"><a href="/book_cards/add">※新しいデータを入力 &gt;&gt;</a></p>

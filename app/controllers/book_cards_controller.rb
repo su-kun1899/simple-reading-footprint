@@ -4,7 +4,7 @@ class BookCardsController < ApplicationController
   end
 
   def detail
-    @book_cards = BookCard.find(params[:id])
+    @book_card = BookCard.find(params[:id])
   end
 
   def add
