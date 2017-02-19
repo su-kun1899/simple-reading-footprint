@@ -8,11 +8,11 @@ class BookCardsController < ApplicationController
   end
 
   def add
-    @book_cards = BookCard.new
+    @book_card = BookCard.new
   end
 
   def edit
-    @book_cards = BookCard.find(params[:id])
+    @book_card = BookCard.find(params[:id])
   end
 
   def create

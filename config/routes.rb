@@ -3,12 +3,12 @@ Rails.application.routes.draw do
   get 'book_cards', to: 'book_cards#index'
 
   get 'book_cards/add'
-  post 'book_cards/add'
+  post 'book_cards/create'
 
   get 'book_cards/:id', to: 'book_cards#detail'
 
-  get 'book_cards/edit:id', to: 'cards#edit'
-  patch 'book_cards/edit/:id', to: 'book_cards#edit'
+  get 'book_cards/edit/:id', to: 'book_cards#edit'
+  patch 'book_cards/edit/:id', to: 'book_cards#update'
 
   get 'book_cards/delete/:id', to: 'book_cards#delete'
 

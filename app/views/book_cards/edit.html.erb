@@ -1,7 +1,7 @@
 <h1>BookCards#edit</h1>
 <p>「<%= @book_card.title %>」の内容を編集します。</p>
 <table>
-  <%= form_for(@book_card, url: {controller: 'book_cards', action: 'edit', id: @book_card.id}) do |form| %>
+  <%= form_for(@book_card, url: {controller: 'book_cards', action: 'update', id: @book_card.id}) do |form| %>
       <tr>
         <th>題名</th>
         <td><%= form.text_field :title, {size: 40} %></td>

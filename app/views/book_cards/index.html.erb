@@ -15,7 +15,9 @@
         </td>
         <td class="author-row"><%= book_card.author %></td>
         <td class="button-row"><a href="/book_cards/edit/<%= book_card.id %>">編集</a></td>
-        <td class="button-row"><a href="#">削除</a></td>
+        <%# TODO ひどいコードだ。。 %>
+        <td class="button-row"><a href="javascript:window.delData(
+        <%= (book_card.id.to_s + ", '".to_s + book_card.title.to_s).html_safe %>');">削除</a></td>
       </tr>
   <% end %>
 </table>
